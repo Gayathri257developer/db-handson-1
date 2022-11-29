@@ -337,7 +337,7 @@ Human_Resource> db.employee.find({$and: [{"yearGrad" : {$gt : "2015"}}, {"overal
 
 #### 6. Query the collection ""employee"" and update the salary of the employee whose salary is greater than 70000 to 65000.
 <pre>
-Human_Resource> db.employee.updateMany({"salary" : "70000"},{$set : {"salary" : "65000"}})
+Human_Resource> db.employee.updateMany({"salary" : {$gt : "70000"}},{$set : {"salary" : "65000"}})
 {
   acknowledged: true,
   insertedId: null,
